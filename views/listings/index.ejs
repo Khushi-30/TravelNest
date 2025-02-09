@@ -1,0 +1,176 @@
+<% layout("/layouts/boilerplate") %>
+
+    <!-- <div class="filters">
+        <a href="/testing/filter?category=Trending" class="filter">
+            <i class="fa-solid fa-fire"></i>
+            <p>Trending</p>
+        </a>
+        <a href="/testing/filter?category=Rooms" class="filter">
+            <i class="fa-solid fa-house"></i>
+            <p>Rooms</p>
+        </a>
+        <a href="/testing/filter?category=Beach" class="filter">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <p>Beach</p>
+        </a>
+        <a href="/testing/filter?category=Boats" class="filter">
+            <i class="fa-solid fa-sailboat"></i>
+            <p>Boats</p>
+        </a>
+        <a href="/testing/filter?category=Arctic" class="filter">
+            <i class="fa-solid fa-snowflake"></i>
+            <p>Arctic</p>
+        </a>
+        <a href="/testing/filter?category=Mountain" class="filter">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <p>Mountains</p>
+        </a>
+        <a href="/testing/filter?category=Food" class="filter">
+            <i class="fa-solid fa-utensils"></i>
+            <p>Food</p>
+        </a>
+        <a href="/testing/filter?category=Farm" class="filter">
+            <i class="fa-solid fa-seedling"></i>
+            <p>Farm</p>
+        </a>
+        <a href="/testing/filter?category=Historical" class="filter">
+            <i class="fa-solid fa-gopuram"></i>
+            <p>Historical</p>
+        </a>
+        <a href="/testing/filter?category=Religious" class="filter">
+            <i class="fa-solid fa-om"></i>
+            <p>Religious</p>
+        </a>
+        <a href="/testing/filter?category=Trending" class="filter">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+            <p>Luxe</p>
+        </a>
+        <div class="tax-toggle">
+            <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Display total before taxes</label>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="filters">
+        <button id="scroll-left" class="scroll-btn">&#10094;</button> <!-- Left Arrow -->
+        <a href="/testing/filter?category=Trending" class="filter" >    
+            <i class="fa-solid fa-fire"></i>
+            <p>Trending</p>
+        </a>
+        <a href="/testing/filter?category=Boat" class="filter" >    
+            <i class="fa-solid fa-sailboat"></i>
+            <p>Boat</p>
+        </a>
+        <a href="/testing/filter?category=Beach" class="filter" >    
+            <i class="fa-solid fa-person-swimming"></i>
+            <p>Beach</p>
+        </a>
+        <a href="/testing/filter?category=Mountain" class="filter" >    
+            <i class="fa-solid fa-mountain-sun"></i>
+            <p>Mountain</p>
+        </a>
+        <a href="/testing/filter?category=Domes" class="filter" >    
+            <i class="fa-solid fa-landmark-dome"></i>
+            <p>Domes</p>
+        </a>
+        <a href="/testing/filter?category=Farm" class="filter" >    
+            <i class="fa-solid fa-seedling"></i>
+            <p>Farm</p>
+        </a>
+        <a href="/testing/filter?category=Castles" class="filter" >    
+            <i class="fa-brands fa-fort-awesome"></i>
+            <p>Castles</p>
+        </a>
+        <a href="/testing/filter?category=Arctic" class="filter" >    
+            <i class="fa-solid fa-snowflake"></i>
+            <p>Arctic</p>
+        </a>
+        <a href="/testing/filter?category=Luxe" class="filter" >    
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+            <p>Luxe</p>
+        </a>
+        <a href="/testing/filter?category=Food" class="filter" >    
+            <i class="fa-solid fa-utensils"></i>
+            <p>Food</p>
+        </a>
+        <a href="/testing/filter?category=Jungle" class="filter">
+            <i class="fa-solid fa-tree"></i>
+            <p>Jungle</p>
+        </a>
+        <a href="/testing/filter?category=Waterfalls" class="filter">
+            <i class="fa-solid fa-water"></i>
+            <p>Waterfalls</p>
+        </a>
+        <a href="/testing/filter?category=Cityscape" class="filter">
+            <i class="fa-solid fa-city"></i>
+            <p>Cityscape</p>
+        </a>
+        <a href="/testing/filter?category=Caves" class="filter">
+            <i class="fa-solid fa-mountain"></i>
+            <p>Caves</p>
+        </a>
+        <a href="/testing/filter?category=Forests" class="filter">
+            <i class="fa-solid fa-leaf"></i>
+            <p>Forests</p>
+        </a>
+        <a href="/testing/filter?category=Nightlife" class="filter">
+            <i class="fa-solid fa-moon"></i>
+            <p>Nightlife</p>
+        </a>
+        <a href="/testing/filter?category=Hot Springs" class="filter">
+            <i class="fa-solid fa-hot-tub-person"></i>
+            <p>Hot Springs</p>
+        </a>
+        <a href="/testing/filter?category=Wildlife" class="filter">
+            <i class="fa-solid fa-paw"></i>
+            <p>Wildlife</p>
+        </a>
+        <a href="/testing/filter?category=Countryside" class="filter">
+            <i class="fa-solid fa-house-chimney"></i>
+            <p>Countryside</p>
+        </a>
+        <a href="/testing/filter?category=Temples" class="filter">
+            <i class="fa-solid fa-place-of-worship"></i>
+            <p>Temples</p>
+        </a>
+        <button id="scroll-right" class="scroll-btn">&#10095;</button> <!-- Right Arrow -->
+    </div>
+    <div class="taxswitch" >
+        <div class="form-check  form-check-reverse form-switch ">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label swt" for="flexSwitchCheckDefault">Display total before tax</label>
+        </div>
+    </div>
+    <div class="allcard row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <% for(let list of alllist) { %>
+            <a href="/testing/<%= list._id %>" class="list-link-ind">
+                <div class="card col">
+                    <img src="<%= list.image.url %>" class="card-img-top" alt="Oops...image doesn't load" style="height: 17.5rem;"/>
+                    <div class="card-img-overlay"><%= list.country %></div>
+                    <div class="card-body"> 
+                    <p class="card-text"><b><%= list.title %></b></p>
+                    <p> &#8377; <%= list.price%>/night <i class="tax-info">+18% GST</i></p>
+                    
+                    </div>
+                </div> 
+            </a>
+        <%}%>
+    </div>
+
+<script>
+let taxSwith = document.getElementById("flexSwitchCheckDefault");
+taxSwith.addEventListener("click",()=>{
+    let taxInfo = document.getElementsByClassName("tax-info");
+        for(i of taxInfo){
+            if(i.style.display != "inline"){
+            i.style.display="inline"
+            }
+            else{
+            i.style.display="none";
+            }
+        }
+    }
+)
+</script>

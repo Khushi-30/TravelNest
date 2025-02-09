@@ -1,0 +1,84 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-7 offset-3" style="margin-right: 5 !important;">
+            <h3>Make new list</h3>
+            <br>
+            <form method="POST" action="/testing" class="needs-validation" enctype="multipart/form-data" novalidate>
+
+                <div class="mb-4">
+                    <label for="title">Title</label>
+                    <input name="listing[title]" type="text" class="form-control" id="title" required>                    
+                    <div class="invalid-feedback">Please provide a valid title.</div>
+                </div>
+                <div class="mb-4">
+                    <label for="description">Description</label>
+                    <textarea name="listing[description]" class="form-control" id="description" required></textarea>
+                    <div class="invalid-feedback">Please provide a valid description.</div>
+                </div>
+                <div class="mb-4">
+                    <label for="image">Image</label>
+                    <input name="listing[image]" type="file" class="form-control" id="image" required>
+                    <div class="invalid-feedback">Please provide a valid image url.</div>
+                </div>
+                <div class="row">
+                    <div class="mb-4 col-4">
+                        <label for="price">Price</label>
+                        <input name="listing[price]" class="form-control" id="price" required>
+                        <div class="invalid-feedback">Please provide a valid price.</div>
+                    </div>
+                    <div class="mb-4 col-8">
+                        <label for="category">Select category</label>
+                        <select name="listing[category][]" class="form-select" multiple required>
+                            <option value="Trending">Trending</option>
+                            <option value="Food">Food</option>
+                            <option value="Luxe">Luxe</option>
+                            <option value="Mountain">Mountain</option>
+                            <option value="Domes">Domes</option>
+                            <option value="Castles">Castles</option>
+                            <option value="Farm">Farm</option>
+                            <option value="Beach">Beach</option>
+                            <option value="Arctic">Arctic</option>
+                            <option value="Boat">Boat</option>
+                            <option value="Jungle">Jungle</option>
+                            <option value="Waterfalls">Waterfalls</option>
+                            <option value="Cityscape">Cityscape</option>
+                            <option value="Caves">Caves</option>
+                            <option value="Forests">Forests</option>
+                            <option value="Nightlife">Nightlife</option>
+                            <option value="Hot Springs">Hot Springs</option>
+                            <option value="Wildlife">Wildlife</option>
+                            <option value="Countryside">Countryside</option>
+                            <option value="Temples">Temples</option>tion>                     
+                            <option value="Luxe">Luxe</option>
+                        </select>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="mb-4 col-6">
+                        <label for="location">Location</label>
+                        <input name="listing[location]" type="text" class="form-control" id="location" required>
+                        <div class="invalid-feedback">Please provide a valid location.</div>
+                    </div>
+                    <div class="mb-4 col-6">
+                        <label for="country">Country</label>
+                        <input name="listing[country]" type="text" class="form-control" id="country" required>
+                        <div class="invalid-feedback">Please provide a valid country.</div>
+                    </div>
+                </div>         
+                <button class="btn btn-dark">Add</button>
+                <br>
+                <br>
+            </form>
+        </div>
+    </div>
+    <script src="/ja/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('select[name="listing[category][]"]').select2({
+                placeholder: "Select categories",
+                allowClear: true
+            });
+        });
+    </script>
+</body>

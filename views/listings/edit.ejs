@@ -1,0 +1,89 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-7 offset-3">
+            <h3>Edit list</h3>
+    <br>
+    <form method="POST" action="/testing/<%= list._id %>?_method=PUT" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <div class="mb-3">
+            <label for="title">Title</label>
+            <input name="listing[title]" type="text" class="form-control" id="title" value="<%= list.title %>" required>
+            <div class="invalid-feedback">Please provide a valid title.</div>
+        </div>
+        <div class="mb-3">
+            <label for="description">Description</label>
+            <textarea name="listing[description]" class="form-control" id="description" required><%= list.description %></textarea>          
+            <div class="invalid-feedback">Please provide a valid description.</div>
+        </div>
+        <div class="mb-3">
+            <p>Original image</p>
+            <img class="row col-5 ms-1 mt-2" src="<%= blurimg %>" alt="">
+        </div>
+        <div class=" mb-3">
+            <label for="image">Uploade Image</label>
+            <input name="listing[image]" type="file" class="form-control" id="image" value="<%= list.image %>">
+        </div>
+        <div class="row">
+            <div class="mb-3 col-4">
+                <label for="price">Price</label>
+                <input name="listing[price]" type="number" class="form-control" id="price" value="<%= list.price %>" required>               
+                <div class="invalid-feedback">Please provide a valid price.</div>
+            </div>
+            <div class="mb-3 col-8">
+                <label for="multiSelect" class="form-label" style="margin-bottom: 0% !important;">
+                    Select your listing category
+                </label>
+                <select name="listing[category][]" class="form-select" multiple required>
+                    <option value="Trending" <%= list.category.includes('Trending') ? 'selected' : '' %>>Trending</option>
+                    <option value="Food" <%= list.category.includes('Food') ? 'selected' : '' %>>Food</option>
+                    <option value="Luxe" <%= list.category.includes('Luxe') ? 'selected' : '' %>>Luxe</option>
+                    <option value="Mountain" <%= list.category.includes('Mountain') ? 'selected' : '' %>>Mountain</option>
+                    <option value="Domes" <%= list.category.includes('Domes') ? 'selected' : '' %>>Domes</option>
+                    <option value="Castles" <%= list.category.includes('Castles') ? 'selected' : '' %>>Castles</option>
+                    <option value="Farm" <%= list.category.includes('Farm') ? 'selected' : '' %>>Farm</option>
+                    <option value="Beach" <%= list.category.includes('Beach') ? 'selected' : '' %>>Beach</option>
+                    <option value="Arctic" <%= list.category.includes('Arctic') ? 'selected' : '' %>>Arctic</option>
+                    <option value="Boat" <%= list.category.includes('Boat') ? 'selected' : '' %>>Boat</option>
+                    <option value="Jungle" <%= list.category.includes('Jungle') ? 'selected' : '' %>>Jungle</option>
+                    <option value="Waterfalls" <%= list.category.includes('Waterfalls') ? 'selected' : '' %>>Waterfalls</option>
+                    <option value="Cityscape" <%= list.category.includes('Cityscape') ? 'selected' : '' %>>Cityscape</option>
+                    <option value="Caves" <%= list.category.includes('Caves') ? 'selected' : '' %>>Caves</option>
+                    <option value="Forests" <%= list.category.includes('Forests') ? 'selected' : '' %>>Forests</option>
+                    <option value="Nightlife" <%= list.category.includes('Nightlife') ? 'selected' : '' %>>Nightlife</option>
+                    <option value="Hot Springs" <%= list.category.includes('Hot Springs') ? 'selected' : '' %>>Hot Springs</option>
+                    <option value="Wildlife" <%= list.category.includes('Wildlife') ? 'selected' : '' %>>Wildlife</option>
+                    <option value="Countryside" <%= list.category.includes('Countryside') ? 'selected' : '' %>>Countryside</option>
+                    <option value="Temples" <%= list.category.includes('Temples') ? 'selected' : '' %>>Temples</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-6">
+                <label for="location">Location</label>
+                <input name="listing[location]" type="text" class="form-control" id="location" value="<%= list.location %>" required>
+                <div class="invalid-feedback">Please provide a valid location.</div>
+            </div>
+            <div class="mb-3 col-6">
+                <label for="country">Country</label>
+                <input name="listing[country]" type="text" class="form-control" id="country" value="<%= list.country %>" required>
+                <div class="invalid-feedback">Please provide a valid country.</div>
+            </div>
+        </div>
+        
+        <button class="btn btn-dark">Save changes</button>
+        <br>
+        <br>
+    </form>
+        </div>
+    </div>
+    <script src="/ja/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('select[name="listing[category][]"]').select2({
+                placeholder: "Select categories",
+                allowClear: true
+            });
+        });
+    </script>
+        
+</body>
